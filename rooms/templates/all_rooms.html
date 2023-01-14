@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+<ul>
+  {% for data in datas %}
+  <li><a href="/rooms/{{data.pk}}">
+    {{data.name}}</br>
+     {% for amenity in data.amenities.all %}
+    <span>{{amenity.name}}</span>
+    {% endfor %}<a/>
+  </li>
+  {% endfor %}
+</ul>

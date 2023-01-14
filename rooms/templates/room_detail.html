@@ -1,0 +1,13 @@
+{% if not not_found %}
+<h1>{{data.name}}</h1>
+
+<h3>{{data.country}} / {{data.city}}</h3>
+
+<h4>{{data.price}}</h4>
+
+<p>{{data.description}}</p>
+
+<h5>{{data.category.name}}</h5>
+{% else %}
+<h1>404 not found</h1>
+{% endif %}
