@@ -33,10 +33,12 @@ class Booking(CommonModel):
         null=True,
         on_delete=models.SET_NULL,
         related_name="bookings",
-        
     )
     check_in = models.DateField(null=True, blank=True)
-    check_out = models.DateField(null=True, blank=True)
+    check_out = models.DateField(
+        null=True,
+        blank=True,
+    )
     experience_time = models.DateTimeField(null=True, blank=True)
     guests = models.PositiveIntegerField()
 
