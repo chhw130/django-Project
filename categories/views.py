@@ -6,10 +6,6 @@ from rest_framework.response import Response
 from .serializers import CategorySerializers
 
 
-# from django.core import serializers
-# Create your views here.
-
-
 @api_view(["POST", "GET"])
 def categories(request):
     if request.method == "GET":
@@ -34,7 +30,7 @@ def categories(request):
     # {"name": "Category from DRF", "kind": "rooms"}
 
 
-@api_view()
+@api_view(["GET", "PUT"])
 def category(request, pk):
     one_category = Category.objects.get(pk=pk)
     serializer = CategorySerializers(one_category)

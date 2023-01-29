@@ -6,6 +6,7 @@ from .models import ChattingRoom, Message
 class RoomAdmin(admin.ModelAdmin):
     list_display = ["__str__", "created_at", "updated_at"]
     list_filter = ["created_at"]
+    list
 
 
 @admin.register(Message)

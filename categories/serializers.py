@@ -18,3 +18,6 @@ class CategorySerializers(serializers.Serializer):
 
     def create(self, validated_data):
         return Category.objects.create(**validated_data)
+
+        # **을 사용하면 {"name" : "category"}를
+        # name = "category"로 바꿈
